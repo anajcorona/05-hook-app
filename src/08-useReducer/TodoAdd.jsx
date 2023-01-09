@@ -19,6 +19,8 @@ export const TodoAdd = ({ onNewTodo }) => {
             description: description,
         };
 
+        console.log("newTodo",newTodo);
+
         onNewTodo( newTodo );
         onResetForm();
     }
