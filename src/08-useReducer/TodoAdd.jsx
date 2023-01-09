@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useForm } from '../hooks/useForm';
 
 export const TodoAdd = ({ onNewTodo }) => {
@@ -9,7 +9,7 @@ export const TodoAdd = ({ onNewTodo }) => {
         }
     );
 
-    const onFormSubmit = (event) => {
+    const onFormSubmit = ( event ) => {
         event.preventDefault();
         if( description.length <= 1 ) return;
 
@@ -19,7 +19,7 @@ export const TodoAdd = ({ onNewTodo }) => {
             description: description,
         };
 
-        onNewTodo(newTodo);
+        onNewTodo( newTodo );
         onResetForm();
     }
 
@@ -34,9 +34,9 @@ export const TodoAdd = ({ onNewTodo }) => {
             value={ description }
             onChange={ onInputChange}
         />
-        <button type='submit'
-            className='btn btn-primary mt-1'
-            >
+        <button 
+            type='submit'
+            className='btn btn-primary mt-1'>
             Agregar
         </button>
     </form>

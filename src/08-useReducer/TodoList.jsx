@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { TodoItem } from "./TodoItem"
 
-export const TodoList = ({todos = []}) => {
+export const TodoList = ({ todos = [], onDeleteTodo, onToggleTodo }) => {
     console.log("----->",todos);
 
   return (
@@ -10,8 +10,10 @@ export const TodoList = ({todos = []}) => {
         {
             todos.map(todo => (
                 <TodoItem
-                    key={todo.id}
-                    todo={todo}
+                    key={ todo.id }
+                    todo={ todo }
+                    onDeleteTodo={ onDeleteTodo }
+                    onToggleTodo={ onToggleTodo }
                 />
             ))
         }
